@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>i-SHOP</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://kit.fontawesome.com/9755b4a824.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="root">
 
     <!-- HEADER -->
+    
     <header class="header">
         <div class="logo">
         <i class="fa-solid fa-microchip"></i>
@@ -23,18 +24,25 @@
     </header>
     
 
-    <nav class="nav-bar">
-        <div class="menu">
-            <span class="material-symbols-outlined">
-                menu
-                </span>
-        </div>
-        <aside>
-            <p>Inicio</p>
-            <p>Catálogo</p>
-            <p>Ofertas</p>
-            <p>Contacto</p>
-        </aside>
+    <nav class="menu">
+        <button id="toggler" class="menu-toggler">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <ul>
+            <li>
+                <a href="#">INICIO</a>
+            </li>
+
+            <li>
+                <a href="#">CATÁLOGO</a>
+                </li>
+            <li>
+
+                <a href="#">OFERTAS</a>
+            </li>
+
+        </ul>
 
     </nav>
     
@@ -125,8 +133,12 @@
         <!-- FOOTER -->
     <footer>
         <div class="redes">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.facebook.com/ACEVR/" target="_blank" > 
+                <i class="fa-brands fa-facebook"></i></a> 
+
+            <a href="https://www.instagram.com/acevr" target="_blank">
+                <i class="fa-brands fa-instagram"></i></a>
+            
         </div>
         <div class="rights">
             <p>Todos los derechos reservados</p>
@@ -135,8 +147,7 @@
     </footer>    
 
     
-
-
+<script src="./assets/js/script.js"></script>
 
     
 </body>

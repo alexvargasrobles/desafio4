@@ -9,7 +9,7 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
-        "header menu"
+        "header nav"
         "filtro filtro"
         "main main"
         "footer footer";
@@ -31,78 +31,33 @@ header {
     padding: 1rem;
     align-items: center;
     display: flex;
-    transition-duration: 1s;
-    transition: transform 1s;
-}
-
-.logo i:hover{
-    color: #ec9b18;
-    transition-duration: 1s;
-    transition: transform 1s;
-    transform: scale(1.5);
-}
-
-nav{
-    background-color: #000000;
 }
 
 .menu{
-    display: grid;
-    grid-area: menu;
-}
-
-.menu-toggler{
-    background-color:#000000;
-    border: none;
-    font-size: 2rem;
-    transition-duration: 1s;
-}
-
-.open .menu-toggler{
-    color: #ec9b18;
-}
-
-.menu-toggler:hover{
-    color: #ec9b18;
-}
-
-
-.menu ul{
-    list-style: none;
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 103px;
-    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar{
+    display: grid;
+    grid-area: nav;
     background-color: #000000;
-    color: #d4a628;
-    width: 80%;
-    max-width: 140px;
-    min-width: 140px;
-    padding: 2rem;
-    height: 103px;
-    border: none;
-    transform: translateX(250px);
+}
+
+
+
+.material-symbols-outlined{
+    color: #beb7a4;
+    display: flex;
+    justify-content: center;
     
 }
 
-.menu li{
-    cursor: pointer;
-    text-align: left;
-}
 
-.open .menu ul{
-    transform: translateX(0px);
-    justify-content: ;
-}
 
-.open .menu li:hover{
-    color: #ec9b18;
-}
-
-ul{
-    padding: 0;
-    margin: 0;
+aside{
+    display: none;
 }
 
 /* FILTROS */
@@ -122,13 +77,12 @@ main{
     display: grid;
     grid-area: main;
 }
-
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2.5rem;
     min-height: 100vh;
 }
 
@@ -146,19 +100,13 @@ main{
     width: 200px;
     align-items: center;
     text-align: center;
-    margin: 1rem;
-}
+    margin: 2rem;
 
+}
 
 img{
     width: 100%;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-img:hover{
-    transform: scale(1.150);
-    transition-duration: 1s;
+    padding: 1.5rem;
 }
 
 .cards p{
@@ -166,50 +114,12 @@ img:hover{
     color: #534f45;
 }
 
-.cards button{
+button{
     margin: 1rem;
     padding: 0.5rem;
     background-color: #d8c799;
     border-radius: 10%;
-    cursor: pointer;
 }
-
-.cards button:hover{
-    transform: scale(1.2);
-    transition-duration: 1s;
-}
-
-a{
-    text-decoration: none;
-    color: #d8c799;
-}
-
-@media (hover: hover) 
-{
-    li:hover  {
-        color:#ec9b18;
-        transition-duration: 1
-    }
-
-    a:hover {
-        color:#ec9b18;
-        transition-duration: 1
-    }
-    
-    .cards button:hover {
-        background-color:#ec9b18;
-        transition-duration: 1s;
-    }
-
-    .redes i:hover {
-        color:#ec9b18;
-        transition-duration: 1s;}
-
-    .logo:hover {
-        color:#ec9b18;
-        transition-duration: 1s;}
-}
-
 
 /* PAGINACION */
 
@@ -219,12 +129,11 @@ a{
     margin: 2rem;
     }
 
-.paginacion li{
+li{
     display: flex;
     border: solid 0.5px;
     border-color: #e6dcdc;
     padding: 0.5rem;
-    cursor: pointer;
 }
 
 .numeros{
@@ -242,19 +151,23 @@ footer{
     color: #fff;
     text-align: center;
     padding: 1rem;
+    
+
 }
 
 .redes{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    text-align: center;
+    
 }
+
 
 i{
     color: #beb7a4;
     padding: 0.5rem;
-    cursor: pointer;
 }
 
 /* QUERYS */
@@ -270,9 +183,11 @@ i{
             
     }
 
-    .menu{
-        display: grid;
-        grid-area: menu;
+    nav{
+        background-color: #000000;
+        color: #d4a628;
+        display: flex;
+        justify-content: space-around;
     }
     
     .logo{
@@ -283,24 +198,24 @@ i{
         display: flex;
     }
     
-        .menu-toggler{
-        display: none;
-    }
     
-    .menu ul{
-        position: relative;
-        width: auto;
-        max-width: auto;
-        height: auto;
-        padding: 1rem;
-        flex-direction: column;
-        top: 0;
-        color:#d8c799;
-        text-align: center;
-        transform: none;
+    .nav-bar{
+        display: grid;
+        grid-area: menu;
     }
 
-    .menu li{
+    .menu{
+        display: none
+    }
+    
+    aside{
+        display: flex;
+        flex-direction: column;
+        color:#d8c799;
+        text-align: center;
+    }
+
+    aside p{
         padding: 1rem;
     }
     
@@ -316,11 +231,14 @@ i{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        
         align-items: center;
         }
 
     .redes{
-        align-items: flex-end;
-        border: none;
-    }    
+
+        justify-content: center;
+        text-align: center;
+    }
+
 }
