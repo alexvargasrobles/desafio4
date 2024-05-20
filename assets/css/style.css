@@ -156,13 +156,14 @@ footer{
 }
 
 .redes{
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
     text-align: center;
-}
-
-.rights{
     
 }
+
 
 i{
     color: #beb7a4;
