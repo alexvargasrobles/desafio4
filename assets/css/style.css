@@ -86,6 +86,8 @@ nav{
     
 }
 
+
+
 .menu li{
     cursor: pointer;
     text-align: left;
@@ -93,7 +95,7 @@ nav{
 
 .open .menu ul{
     transform: translateX(0px);
-    justify-content: ;
+    
 }
 
 .open .menu li:hover{
@@ -164,6 +166,10 @@ img:hover{
 .cards p{
     padding: 0.3rem;
     color: #534f45;
+}
+
+.cards h4{
+    color: #ff0000;
 }
 
 .cards button{
